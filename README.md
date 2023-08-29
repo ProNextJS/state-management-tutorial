@@ -1,0 +1,8 @@
+- Start with `starting-point`
+- Add CartContext to get to `cart-context`
+- Add initial cart state from server to get to `cart-context-with-initial-state`
+- Finish the React state version to get to `complete-react-state`
+- Port, starting with `cart-context-with-initial-state`, to Redux to get to `cart-with-redux`
+- Complete Redux port with `complete-redux`
+- Start again from `cart-context-with-initial-state` to use Zustand with `complete-zustand`
+- Start again from `cart-context-with-initial-state` to use Jotai instead with `complete-jotai`
