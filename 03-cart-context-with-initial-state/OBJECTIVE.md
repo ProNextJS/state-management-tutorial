@@ -150,7 +150,7 @@ const count = useCount()((state) => state.count);
 
 This will force a re-render only when the returned value from the selector changes.
 
-# Exercise 4 - Completing the React Context version of the example
+# Exercise 4 - Completing the Jotai version of the example
 
 You'll need to remove the existing `CartContext` object and replace it with a Jotai store. Then use atoms to model the cart and reviews.
 
