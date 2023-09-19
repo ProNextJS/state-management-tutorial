@@ -9,3 +9,4 @@ tasks:
         gp open ${folder}/src/
         gp preview $(gp url 3000)
         exit
+	openMode: split-right
