@@ -1,5 +1,4 @@
 tasks:
-    - init: |
-          npm install
-    - command: |
-          npm start
+    - name: Dev Server
+      init: npm install
+      command: npm run dev
