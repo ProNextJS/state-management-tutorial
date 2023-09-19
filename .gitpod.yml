@@ -6,7 +6,7 @@ tasks:
     - name: Lesson context
       command: |
         gp ports await 3000
-        gp open ${folder}/src/README.md
+        gp open ${folder}/README.md
         gp preview $(gp url 3000)
         exit
       openMode: split-right
