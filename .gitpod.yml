@@ -1,0 +1,12 @@
+tasks:
+    - name: Dev Server
+      before: cd ${folder}
+      init: npm install
+      command: npm run dev
+    - name: Lesson context
+      command: |
+        gp ports await 3000
+        gp open ${folder}/README.md
+        gp preview $(gp url 3000)
+        exit
+      openMode: split-right
