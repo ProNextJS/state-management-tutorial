@@ -18,7 +18,7 @@ const ReviewsContext = createContext<ReturnType<typeof createStore>>(null!);
 
 export const useReviews = () => {
   if (!ReviewsContext)
-    throw new Error("useCart must be used within a CartProvider");
+    throw new Error("useReviews must be used within a ReviewsProvider");
   return useContext(ReviewsContext);
 };
 
