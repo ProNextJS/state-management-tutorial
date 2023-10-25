@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import { revalidatePath } from "next/cache";
 
 import Reviews from "./components/Reviews";
 import AddToCart from "@/app/components/AddToCart";
@@ -33,6 +34,7 @@ export default async function ProductDetail({
   const addReviewAction = async (text: string, rating: number) => {
     "use server";
     const reviews = await addReview(+id, { text, rating });
+    revalidatePath(`/products/${id}`);
     return reviews || [];
   };
 
