@@ -12,13 +12,12 @@ import { getProductById, getProducts } from "@/api/products";
 import { addToCart } from "@/api/cart";
 import { addReview } from "@/api/products";
 
-export const dynamic = "force-dynamic";
-
 export default async function ProductDetail({
-  params: { id },
+  params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }) {
+  const { id } = await params;
   const product = await getProductById(+id);
   const products = await getProducts();
 
